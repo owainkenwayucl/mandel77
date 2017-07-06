@@ -1,6 +1,6 @@
 FC=wfl386
 
-all: mandel.exe show.exe tidy
+all: mandel.exe show.exe tidy .SYMBOLIC
 
 mandel.exe: mandel.obj period2d.obj pbmtools.obj ouchow.obj drawow.obj
 	$(FC) period2d.obj pbmtools.obj ouchow.obj drawow.obj mandel.obj
@@ -27,13 +27,13 @@ pbmtools.obj: pbmtools.f makefile
 	$(FC) -c pbmtools.f
 
 
-clean:
+clean: .SYMBOLIC
 	del *.obj
 	del *.exe
 	del *.err
 	del out.pbm
 
-tidy:
+tidy: .SYMBOLIC
 	del *.obj
 	del *.err
 

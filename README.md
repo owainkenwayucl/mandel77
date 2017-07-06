@@ -10,7 +10,7 @@ You need to install the OpenWatcom F77 Compiler onto DOS to compile this code.
 To build:
 
 ```none
-C:\HOME\SOURCE\MANDEL77>wmake /c
+C:\HOME\SOURCE\MANDEL77>wmake
 ```
 
 To run:
