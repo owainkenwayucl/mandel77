@@ -1,0 +1,21 @@
+FC=wfl386
+GINC=c:\devel\ow\src\fortran\dos
+
+all: mandel.exe tidy .SYMBOLIC
+
+mandel.exe: mandel.obj 
+	$(FC) mandel.obj
+
+mandel.obj: mandel.f makefile
+	$(FC) -INCPath=$(GINC) -c mandel.f
+
+clean: .SYMBOLIC
+	del *.obj
+	del *.exe
+	del *.err
+	del out.pbm
+
+tidy: .SYMBOLIC
+	del *.obj
+	del *.err
+
