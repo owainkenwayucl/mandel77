@@ -1,4 +1,4 @@
-# Mandelbrot Generator with OW Fortran Graphics Library.
+# Mandelbrot Generator with OW Fortran Graphics Library
 
 ## Compilation
 
